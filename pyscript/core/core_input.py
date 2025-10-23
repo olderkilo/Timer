@@ -53,7 +53,7 @@ class Listerner:
 			if self.m_Func.IsAlive():
 				self.m_Func(skey)
 			return
-		if self.m_HotKeys[0] != skey:
+		if self.m_HotKeys[0] not in skey:  #这里修改了
 			if self.m_ForceMatch:
 				self._Revert()
 			return
